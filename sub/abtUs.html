@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About IKEA</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- bxicons -->
+    <link href='https://unpkg.com/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* heroooo */
+        .hero-section {
+    background-color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-title {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #0051ba;
+}
+
+.hero-subtitle {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.btn-warning {
+    /* background-color: #0051ba; */
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.modal-body {
+    padding: 15px;
+}
+
+.btn-secondary {
+    background-color: #666;
+    border: none;
+    padding: 8px 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-secondary:hover {
+    background-color: #444;
+}
+
+
+/* historyyy */
+.timeline {
+        position: relative;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .timeline-item {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 50px;
+        margin-bottom: 30px;
+    }
+
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 0;
+        width: 12px;
+        height: 12px;
+        background-color: #0051ba;
+        border-radius: 50%;
+    }
+
+    .timeline-item::after {
+        content: '';
+        position: absolute;
+        left: 25px;
+        top: 12px;
+        width: 2px;
+        height: 100%;
+        background-color: #ccc;
+    }
+
+    .timeline-item:last-child::after {
+        content: none;
+    }
+
+
+    /* mission & vission */
+    .mission-vision {
+    background-color: #f4f4f4;
+}
+
+.mission-vision .section-header {
+    margin-bottom: 30px;
+}
+
+.mission-vision .mission-vision-card {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.mission-vision .mission-vision-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Design Philosophy Section */
+.design-philosophy {
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+.design-philosophy .section-header {
+    margin-bottom: 40px;
+}
+
+.design-philosophy .section-title {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #0051ba;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.design-philosophy .section-description {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.design-philosophy .philosophy-card {
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.design-philosophy .philosophy-card:hover {
+    transform: scale(1.05);
+}
+
+.design-philosophy .philosophy-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.design-philosophy .philosophy-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.design-philosophy .philosophy-title {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #0051ba;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.design-philosophy .philosophy-info p {
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+}
+
+
+
+
+    /* Community Engagement Section */
+    .community-engagement {
+        background-color: #f4f4f4;
+        padding: 60px 0;
+    }
+
+    .community-engagement .section-header {
+        margin-bottom: 40px;
+    }
+
+    .community-engagement .section-title {
+        font-family: 'Helvetica Neue', sans-serif;
+        color: #0051ba;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .community-engagement .section-description {
+        font-family: 'Roboto', sans-serif;
+        color: #333;
+        font-size: 1.2rem;
+    }
+
+    .community-engagement .engagement-card {
+        position: relative;
+        background-color: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .community-engagement .engagement-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .community-engagement .engagement-image-wrapper {
+        overflow: hidden;
+        border-bottom: 4px solid #0051ba;
+    }
+
+    .community-engagement .engagement-image-wrapper img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .community-engagement .engagement-card:hover .engagement-image-wrapper img {
+        transform: scale(1.05);
+    }
+
+    .community-engagement .engagement-info {
+        padding: 25px;
+        text-align: left;
+    }
+
+    .community-engagement .engagement-title {
+        font-family: 'Helvetica Neue', sans-serif;
+        color: #0051ba;
+        margin-bottom: 15px;
+        font-size: 1.6rem;
+    }
+
+    .community-engagement .engagement-info p {
+        font-family: 'Roboto', sans-serif;
+        color: #666;
+        font-size: 1rem;
+    }
+
+
+/* teammm */
+.meet-the-team {
+    background-color: #ffffff;
+}
+
+.meet-the-team .section-header {
+    margin-bottom: 30px;
+}
+
+.meet-the-team .team-member-card {
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.meet-the-team .team-member-card:hover {
+    transform: translateY(-10px);
+}
+
+.meet-the-team .team-member-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.meet-the-team .team-member-info {
+    margin-top: 15px;
+}
+
+.meet-the-team .team-member-name {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #0051ba;
+    margin-bottom: 5px;
+}
+
+.meet-the-team .team-member-role {
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+}
+
+
+
+/* contactt */
+.contact .form-control {
+    font-family: 'Roboto', sans-serif;
+    border-radius: 4px;
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+.contact .form-control:focus {
+    border-color: #0051ba;
+    box-shadow: none;
+}
+
+.contact .btn-primary {
+    background-color: #0051ba;
+    color: #fff;
+    border-radius: 4px;
+    font-family: 'Helvetica Neue', sans-serif;
+    padding: 12px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.contact .btn-primary:hover {
+    background-color: #003b8e;
+}
+
+
+/* navbar */
+.navbar-nav a {
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+.navbar-light .navbar-brand {
+	color: #000;
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+	color: #000;
+}
+.navbar-light .navbar-nav .nav-link {
+	color: #000;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+	color: #000;
+}
+.w-100 {
+	height: 100vh;
+}
+.navbar-toggler {
+	padding: 1px 5px;
+	font-size: 18px;
+	line-height: 0.3;
+	background: #fff;
+}
+
+.navbar {
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ffffff; /* Ensure it has a background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+}
+/* Top Bar */
+.top-bar {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f4f4f4;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.top-bar-link {
+    color: #0051ba;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.top-bar-link:hover {
+    color: #003c8f;
+}
+
+#searchInput {
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+
+
+/* foottereerer */
+
+.footer {
+    background-color: #f8f8f8;
+    padding: 40px 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer h5 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon i {
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social-icon i:hover {
+    color: #0058a3;
+}
+
+.footer-text {
+    color: #333;
+    font-size: 0.875rem;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Starts -->
+    <header>
+        <div class="top-bar bg-light p-2 text-end d-flex justify-content-end align-items-center">
+            <a href="#" class="top-bar-link me-3">Contact</a>
+            <div class="dropdown">
+                <a class="top-bar-link dropdown-toggle me-3" href="#" role="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Language
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">Español</a></li>
+                    <li><a class="dropdown-item" href="#">Français</a></li>
+                </ul>
+            </div>
+            <a href="#" class="top-bar-link me-3" id="searchIcon"><i class="bi bi-search"></i> Search</a>
+            <input type="text" id="searchInput" class="form-control d-none" placeholder="Search IKEA" style="width: 200px; margin-left: 10px;">
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../pict/ikea logo.png" alt="IKEA Logo" width="150">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#history">History</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#mission">Mission</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#philosophy">Philosophy</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#community-engagement">Community</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#popularity-reports">Reports</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#developer">Developer</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#journey">Journey</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Navbar Ends -->
+
+
+
+<!-- Hero Section -->
+<section class="hero-section d-flex align-items-center justify-content-center text-center" style="background-color: #f4f4f4; height: 100vh;">
+    <div class="container">
+        <h1 class="hero-title" style="font-family: 'Helvetica Neue', sans-serif; color: #0051ba;">Welcome to IKEA</h1>
+        <p class="hero-subtitle" style="font-family: 'Roboto', sans-serif; color: #333;">Discover more about our vision and design inspirations.</p>
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#imageModal">Explore Now</button>
+    </div>
+</section>
+<!-- Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <img src="../pict/poster.webp" alt="IKEA Design Inspiration" class="img-fluid" style="max-height: 500px;">
+                <button type="button" class="btn btn-secondary mt-3" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- History Section Starts -->
+<section class="history section-padding" id="history" style="background-color: #ffffff; padding: 60px 0;">
+    <div class="container">
+        <div class="section-header text-center pb-4">
+            <h2 style="font-family: 'Helvetica Neue', sans-serif; color: #0051ba;">Our History</h2>
+            <p style="font-family: 'Roboto', sans-serif; color: #333;">A journey through the milestones that shaped IKEA.</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content" style="background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
+                    <h4 style="font-family: 'Helvetica Neue', sans-serif; color: #0051ba;">1943: The Birth of IKEA</h4>
+                    <p style="font-family: 'Roboto', sans-serif; color: #555;">Founded by Rayya Mahira in Sweden, IKEA started as a mail-order business selling small household goods.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content" style="background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
+                    <h4 style="font-family: 'Helvetica Neue', sans-serif; color: #0051ba;">1956: The Flat-Pack Revolution</h4>
+                    <p style="font-family: 'Roboto', sans-serif; color: #555;">IKEA introduced flat-pack furniture, revolutionizing the way people buy and assemble their furniture.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content" style="background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
+                    <h4 style="font-family: 'Helvetica Neue', sans-serif; color: #0051ba;">1973: Expanding Beyond Sweden</h4>
+                    <p style="font-family: 'Roboto', sans-serif; color: #555;">IKEA opened its first store outside of Scandinavia in Zurich, marking the beginning of its global presence.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content" style="background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
+                    <h4 style="font-family: 'Helvetica Neue', sans-serif; color: #0051ba;">2008: The IKEA Foundation</h4>
+                    <p style="font-family: 'Roboto', sans-serif; color: #555;">The IKEA Foundation was established to help create better opportunities for children and families in need.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content" style="background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
+                    <h4 style="font-family: 'Helvetica Neue', sans-serif; color: #0051ba;">2020: Leading in Sustainability</h4>
+                    <p style="font-family: 'Roboto', sans-serif; color: #555;">IKEA committed to becoming a climate-positive business by 2030, focusing on sustainable materials and renewable energy.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- History Section Ends -->
+
+
+
+<!-- Mission & Vision Section Starts -->
+<section class="mission-vision section-padding" id="mission" style="background-color: #f4f4f4; padding: 60px 0;">
+    <div class="container">
+        <div class="section-header text-center pb-4">
+            <h2 style="font-family: 'Helvetica Neue', sans-serif; color: #0051ba;">Mission & Vision</h2>
+            <p style="font-family: 'Roboto', sans-serif; color: #333;">Our commitment to creating a better everyday life for the many people.</p>
+        </div>
+        <div class="row">
+            <!-- Mission -->
+            <div class="col-12 col-md-6 mb-4">
+                <div class="mission-vision-card" style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <h3 style="font-family: 'Helvetica Neue', sans-serif; color: #0051ba;">Our Mission</h3>
+                    <p style="font-family: 'Roboto', sans-serif; color: #666;">To offer a wide range of well-designed, functional home furnishing products at prices so low that as many people as possible will be able to afford them.</p>
+                </div>
+            </div>
+            <!-- Vision -->
+            <div class="col-12 col-md-6 mb-4">
+                <div class="mission-vision-card" style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <h3 style="font-family: 'Helvetica Neue', sans-serif; color: #0051ba;">Our Vision</h3>
+                    <p style="font-family: 'Roboto', sans-serif; color: #666;">To create a better everyday life for the many people by inspiring and enabling people to create their own solutions to home furnishing and living.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Mission & Vision Section Ends -->
+
+
+<!-- Design Philosophy Section -->
+<section class="design-philosophy section-padding" id="philosophy">
+    <div class="container">
+        <div class="section-header text-center pb-5">
+            <h2 class="section-title">Our Design Philosophy</h2>
+            <p class="section-description">At IKEA, we believe in creating designs that are functional, beautiful, and sustainable. Discover the principles that guide our approach to design.</p>
+        </div>
+        <div class="row">
+            <!-- Philosophy Card 1 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="philosophy-card">
+                    <img src="../pict/simplicity.jpg" alt="Philosophy Image 1" class="img-fluid">
+                    <div class="philosophy-info">
+                        <h3 class="philosophy-title">Simplicity</h3>
+                        <p>Embracing minimalism to create clean, clutter-free designs that enhance living spaces.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Philosophy Card 2 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="philosophy-card">
+                    <img src="../pict/Functionality.jpg" alt="Philosophy Image 2" class="img-fluid">
+                    <div class="philosophy-info">
+                        <h3 class="philosophy-title">Functionality</h3>
+                        <p>Designs that are not only aesthetically pleasing but also practical and versatile for everyday use.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Philosophy Card 3 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="philosophy-card">
+                    <img src="../pict/Sustainability.jpg" alt="Philosophy Image 3" class="img-fluid">
+                    <div class="philosophy-info">
+                        <h3 class="philosophy-title">Sustainability</h3>
+                        <p>Committed to eco-friendly practices and materials to reduce environmental impact and promote a greener future.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Design Philosophy Section -->
+
+
+<!-- Community Engagement Section -->
+<section class="community-engagement section-padding" id="community-engagement">
+    <div class="container">
+        <div class="section-header text-center pb-5">
+            <h2 class="section-title">Community Engagement</h2>
+            <p class="section-description">At IKEA, we believe in giving back to the communities we serve. Discover how we engage with and support local communities around the world.</p>
+        </div>
+        <div class="row">
+            <!-- Engagement Card 1 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="engagement-card">
+                    <div class="engagement-image-wrapper">
+                        <img src="../pict/community1.jpg" alt="Community Image 1" class="img-fluid">
+                    </div>
+                    <div class="engagement-info">
+                        <h3 class="engagement-title">Sustainable Living Workshops</h3>
+                        <p>We host workshops to educate communities on sustainable living practices and how to reduce their carbon footprint.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Engagement Card 2 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="engagement-card">
+                    <div class="engagement-image-wrapper">
+                        <img src="../pict/community2.jpg" alt="Community Image 2" class="img-fluid">
+                    </div>
+                    <div class="engagement-info">
+                        <h3 class="engagement-title">Local Partnerships</h3>
+                        <p>Partnering with local organizations to create impactful projects that benefit the community and the environment.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Engagement Card 3 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="engagement-card">
+                    <div class="engagement-image-wrapper">
+                        <img src="../pict/community3.jpg" alt="Community Image 3" class="img-fluid">
+                    </div>
+                    <div class="engagement-info">
+                        <h3 class="engagement-title">Community Support Programs</h3>
+                        <p>Providing resources and support to local initiatives that aim to improve the quality of life in underprivileged areas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Community Engagement Section -->
+
+
+
+<!-- Reports of IKEA's Popularity Section -->
+<section id="popularity-reports" class="section-padding mt-5 mb-5" style="background-color: #ffffff;">
+    <div class="container">
+        <div class="section-header text-center pb-5">
+            <h2 style="font-family: 'Helvetica Neue', sans-serif; color: #0051ba;">Reports of IKEA's Popularity</h2>
+            <p style="font-family: 'Roboto', sans-serif; color: #333;">Discover how IKEA is loved around the world through our popularity reports.</p>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <canvas id="popularityChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Developer Section Starts -->
+<section class="team section-padding" id="developer" style="background-color: #f4f4f4; padding-top: 60px; padding-bottom: 60px;">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h2 style="font-family: 'Noto Sans', sans-serif; color: #003f6c; font-weight: 700;">Meet Our Developer</h2>
+            <p style="font-family: 'Noto Sans', sans-serif; color: #6d6e71; max-width: 600px; margin: 0 auto;">
+                Discover the team behind IKEA's innovative designs and solutions.
+            </p>
+        </div>
+        <div class="row text-center">
+            <!-- Developer Card -->
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="card border-0 rounded-3 shadow-sm" style="background-color: #fff; border: 1px solid #ddd;">
+                    <div class="card-body p-4">
+                        <img src="../pict/billiieee.jpg" alt="Billie Eilish" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px; border: 3px solid #0058a3;">
+                        <h4 class="card-title" style="font-family: 'Noto Sans', sans-serif; color: #003f6c; font-weight: 600;">Billie Eilish</h4>
+                        <p class="card-text" style="font-family: 'Noto Sans', sans-serif; color: #6d6e71;">Passionate developer with a knack for modern design.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Developer Card -->
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="card border-0 rounded-3 shadow-sm" style="background-color: #fff; border: 1px solid #ddd;">
+                    <div class="card-body p-4">
+                        <img src="../pict/conannn.jpeg" alt="Conan Lee Gray" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px; border: 3px solid #0058a3;">
+                        <h4 class="card-title" style="font-family: 'Noto Sans', sans-serif; color: #003f6c; font-weight: 600;">Conan Lee Gray</h4>
+                        <p class="card-text" style="font-family: 'Noto Sans', sans-serif; color: #6d6e71;">Expert in creating user-friendly interfaces.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Developer Card -->
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="card border-0 rounded-3 shadow-sm" style="background-color: #fff; border: 1px solid #ddd;">
+                    <div class="card-body p-4">
+                        <img src="../pict/sabrinaaa.jpeg" alt="Sabrina Carpenter" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px; border: 3px solid #0058a3;">
+                        <h4 class="card-title" style="font-family: 'Noto Sans', sans-serif; color: #003f6c; font-weight: 600;">Sabrina Carpenter</h4>
+                        <p class="card-text" style="font-family: 'Noto Sans', sans-serif; color: #6d6e71;">Specialist in integrating aesthetic and functionality.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Developer Card -->
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="card border-0 rounded-3 shadow-sm" style="background-color: #fff; border: 1px solid #ddd;">
+                    <div class="card-body p-4">
+                        <img src="../pict/hozier.jpg" alt="Paris Paloma" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px; border: 3px solid #0058a3;">
+                        <h4 class="card-title" style="font-family: 'Noto Sans', sans-serif; color: #003f6c; font-weight: 600;">Hozier Bryne</h4>
+                        <p class="card-text" style="font-family: 'Noto Sans', sans-serif; color: #6d6e71;">Driven by a passion for sustainable design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Developer Section Ends -->
+
+
+
+<!-- Meet the Team Section Starts -->
+<section class="meet-the-team section-padding mt-5" id="team">
+    <div class="container">
+        <div class="section-header text-center pb-5">
+            <h2 style="font-family: 'Helvetica Neue', sans-serif; color: #0051ba;">Meet the Team</h2>
+            <p style="font-family: 'Roboto', sans-serif; color: #333;">The brilliant minds and creative souls behind IKEA's innovative designs and solutions.</p>
+        </div>
+        <div class="row">
+            <!-- Team Member 1 -->
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="team-member-card text-center">
+                    <div class="team-member-image">
+                        <img src="../pict/team1.jpg" alt="Billie Eilish" class="img-fluid">
+                    </div>
+                    <div class="team-member-info">
+                        <h4 class="team-member-name">Our Designer</h4>
+                        <p class="team-member-role">Lead Designer</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="team-member-card text-center">
+                    <div class="team-member-image">
+                        <img src="../pict/team2.jpg" alt="Conan Lee Gray" class="img-fluid">
+                    </div>
+                    <div class="team-member-info">
+                        <h4 class="team-member-name">Our UI/UX</h4>
+                        <p class="team-member-role">UX Specialist</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="team-member-card text-center">
+                    <div class="team-member-image">
+                        <img src="../pict/team3.jpg" alt="Sabrina Carpenter" class="img-fluid">
+                    </div>
+                    <div class="team-member-info">
+                        <h4 class="team-member-name">Our Director</h4>
+                        <p class="team-member-role">Creative Director</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 4 -->
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="team-member-card text-center">
+                    <div class="team-member-image">
+                        <img src="../pict/team4.jpg" alt="Paris Paloma" class="img-fluid">
+                    </div>
+                    <div class="team-member-info">
+                        <h4 class="team-member-name">Our Green</h4>
+                        <p class="team-member-role">Sustainability Lead</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Meet the Team Section Ends -->
+
+
+<!-- Contact Starts -->
+<section id="contact" class="contact section-padding pb-3" style="background-color: #f4f4f4;">
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header text-center pb-5">
+                    <h2 style="font-family: 'Helvetica Neue', sans-serif; color: #0051ba;" class="mt-5">Contact Us</h2>
+                    <p style="font-family: 'Roboto', sans-serif; color: #333;">We'd love to hear from you! Whether you have a question or need assistance, we're here to help.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row m-0">
+            <div class="col-md-12 p-0 pt-4 pb-4">
+                <form action="#" class="bg-white p-4 m-auto" style="max-width: 600px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <input class="form-control" placeholder="Full Name" required="" type="text" style="font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; padding: 10px;">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <input class="form-control" placeholder="Email" required="" type="email" style="font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; padding: 10px;">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <textarea class="form-control" placeholder="Message" required="" rows="3" style="font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; padding: 10px;"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <button class="btn btn-primary btn-lg btn-block mt-3" type="button" style="background-color: #0051ba; font-family: 'Helvetica Neue', sans-serif; border: none; border-radius: 4px; padding: 12px 20px; transition: background-color 0.3s ease;">Send Now</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Ends -->
+
+
+
+<!-- Map Location Section -->
+<section class="map-location section-padding mt-5 mb-5" id="map-location">
+    <div class="container">
+        <div class="section-header text-center pb-4">
+            <h2 style="font-family: 'Helvetica Neue', sans-serif; color: #0051ba;">Our Location</h2>
+            <p style="font-family: 'Roboto', sans-serif; color: #333;">Find us on the map and visit your nearest IKEA store.</p>
+        </div>
+        <div class="map-container" style="border-radius: 10px; overflow: hidden;">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.281503709731!2d-122.47825548468114!3d37.81992937975192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085819b763d6d7d%3A0x6784f89603ae1b7f!2sIKEA!5e0!3m2!1sen!2sus!4v1629123917207!5m2!1sen!2sus"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Video Section Starts -->
+<section class="ikea-video section-padding mb-5 mt-5" id="journey">
+    <div class="container">
+        <div class="section-header text-center pb-5">
+            <h2 class="section-title">Our Journey in Motion</h2>
+            <p class="section-description">Experience IKEA's story through our featured videos.</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10">
+                <div class="video-wrapper">
+                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/ytzSlBMUfwY?si=PMZxFpznQQvGaovY" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+        gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Video Section Ends -->
+
+
+
+
+    <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Company</h5>
+                <ul>
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#abt">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#featured">Featured</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Customer Services</h5>
+                <ul>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="orderTracking.html">Order Tracking</a></li>
+                    <li><a href="returns.html">Returns</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Follow Us</h5>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" class="social-icon"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.twitter.com/" class="social-icon"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.instagram.com/" class="social-icon"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.youtube.com/" class="social-icon"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <p class="footer-text">© 2024 IKEA. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+    <!-- Footer Ends -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+<!-- Add Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var ctx = document.getElementById('popularityChart').getContext('2d');
+    var popularityChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['2018', '2019', '2020', '2021', '2022', '2023'],
+            datasets: [{
+                label: 'Global Popularity',
+                data: [75, 80, 85, 90, 92, 95],
+                backgroundColor: 'rgba(0, 81, 186, 0.2)',
+                borderColor: '#0051ba',
+                borderWidth: 2,
+                fill: true,
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        font: {
+                            family: 'Roboto',
+                            size: 14
+                        }
+                    }
+                }
+            }
+        }
+    });
+
+
+
+    // JavaScript to add sticky class to the navbar
+    document.addEventListener('DOMContentLoaded', function() {
+        var navbar = document.querySelector('.navbar');
+        var sticky = navbar.offsetTop;
+
+        function stickyNavbar() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add('sticky');
+            } else {
+                navbar.classList.remove('sticky');
+            }
+        }
+
+        window.onscroll = function() {
+            stickyNavbar();
+        };
+    });
+
+</script>
+
+</body>
+</html>

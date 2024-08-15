@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IKEA Design Inspiration Gallery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero {
+            background-color: #0051ba;
+            color: #fff;
+            text-align: center;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item:hover img {
+            opacity: 0.8;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .back-home-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #0051ba;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .back-home-btn:hover {
+            background-color: #003c8f;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <div class="hero bg-primary">
+        <h1>Design Inspiration Gallery</h1>
+    </div>
+
+    <!-- Gallery Section -->
+    <section>
+        <div class="gallery-container">
+            <!-- Gallery Items -->
+            <div class="gallery-item">
+                <img src="../pict/dl1.jpg" alt="Design Style 1">
+            </div>
+            <div class="gallery-item">
+                <img src="../pict/dl2.jpg" alt="Design Style 2">
+            </div>
+            <div class="gallery-item">
+                <img src="../pict/dl3.jpg" alt="Design Style 3">
+            </div>
+            <div class="gallery-item">
+                <img src="../pict/dl4.jpg" alt="Design Style 4">
+            </div>
+            <div class="gallery-item">
+                <img src="../pict/dl5.jpg" alt="Design Style 5">
+            </div>
+            <div class="gallery-item">
+                <img src="../pict/dl6.jpg" alt="Design Style 5">
+            </div>
+            <div class="gallery-item">
+                <img src="../pict/dl7.jpg" alt="Design Style 5">
+            </div>
+            <div class="gallery-item">
+                <img src="../pict/dl8.jpg" alt="Design Style 5">
+            </div>
+            <div class="gallery-item">
+                <img src="../pict/dl9.jpg" alt="Design Style 5">
+            </div>
+            <div class="gallery-item">
+                <img src="../pict/dl1.jpg" alt="Design Style 1">
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Home Button -->
+    <a href="../index.html" class="back-home-btn bg-primary">Back to Home</a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

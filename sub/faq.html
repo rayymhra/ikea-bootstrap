@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IKEA FAQ</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- bxicons -->
+    <link href='https://unpkg.com/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Font Awesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom CSS for the FAQ page */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .faq-header {
+            background-color: #0051ba;
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .faq-header h1 {
+            font-family: 'Helvetica Neue', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .faq-header p {
+            font-size: 1.2rem;
+        }
+
+        .faq-section {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .accordion .card {
+            border: none;
+            border-bottom: 1px solid #ddd;
+            border-radius: 0;
+        }
+
+        .accordion .card-header {
+            background-color: #f4f4f4;
+            border: none;
+            padding: 15px 20px;
+            font-size: 1.2rem;
+            font-family: 'Helvetica Neue', sans-serif;
+            cursor: pointer;
+        }
+
+        .accordion .card-header:hover {
+            background-color: #e0e0e0;
+        }
+
+        .accordion .collapse {
+            background-color: #fff;
+        }
+
+        .accordion .card-body {
+            padding: 20px;
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
+            color: #666;
+        }
+
+        .faq-section h2 {
+            font-family: 'Helvetica Neue', sans-serif;
+            color: #0051ba;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+
+        /* foottereerer */
+
+.footer {
+    background-color: #f8f8f8;
+    padding: 40px 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer h5 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon i {
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social-icon i:hover {
+    color: #0058a3;
+}
+
+.footer-text {
+    color: #333;
+    font-size: 0.875rem;
+}
+
+
+
+        /* Navbar */
+        .navbar-nav {
+            margin-left: auto;
+            font-size: 15px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .navbar-light .navbar-brand {
+            color: #000;
+            font-size: 25px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+            color: #000;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: #000;
+        }
+
+        .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+            color: #000;
+        }
+
+        .w-100 {
+            height: 100vh;
+        }
+
+        .navbar-toggler {
+            padding: 1px 5px;
+            font-size: 18px;
+            line-height: 0.3;
+            background: #fff;
+        }
+
+        .navbar {
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .navbar.sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #ffffff; /* Ensure it has a background color */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+        }
+
+        /* Top Bar */
+        .top-bar {
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #f4f4f4;
+            font-size: 14px;
+            padding: 10px 0;
+        }
+
+        .top-bar-link {
+            color: #0051ba;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .top-bar-link:hover {
+            color: #003c8f;
+        }
+
+        #searchInput {
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+ <!-- Navbar Starts -->
+ <header>
+    <div class="top-bar bg-light p-2 text-end d-flex justify-content-end align-items-center">
+        <a href="#" class="top-bar-link me-3">Contact</a>
+        <div class="dropdown">
+            <a class="top-bar-link dropdown-toggle me-3" href="#" role="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                Language
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <li><a class="dropdown-item" href="#">English</a></li>
+                <li><a class="dropdown-item" href="#">Español</a></li>
+                <li><a class="dropdown-item" href="#">Français</a></li>
+            </ul>
+        </div>
+        <a href="#" class="top-bar-link me-3" id="searchIcon"><i class="bi bi-search"></i> Search</a>
+        <input type="text" id="searchInput" class="form-control d-none" placeholder="Search IKEA" style="width: 200px; margin-left: 10px;">
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../pict/ikea logo.png" alt="IKEA Logo" width="150">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="abtUs.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="orderTracking.html">Track</a></li>
+                    <li class="nav-item"><a class="nav-link" href="returns.html">Returns</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- Navbar Ends -->
+
+<!-- FAQ Header -->
+<section class="faq-header bg-primary">
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <p>Your most common questions answered.</p>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <h2>FAQ</h2>
+        <div id="faqAccordion" class="accordion">
+            <!-- FAQ Item 1 -->
+            <div class="card">
+                <div class="card-header" id="faqHeading1">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                            What is IKEA's return policy?
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="faqCollapse1" class="collapse show" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        IKEA's return policy allows you to return products within 365 days of purchase with a receipt, as long as the item is unused and in resalable condition.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="card">
+                <div class="card-header" id="faqHeading2">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                            How can I track my IKEA order?
+                        </button>
+                    </h5>
+                </div>
+                <div id="faqCollapse2" class="collapse" aria-labelledby="faqHeading2" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        You can track your order by logging into your IKEA account and visiting the 'Order Status' page. You will also receive a tracking link via email once your order is shipped.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="card">
+                <div class="card-header" id="faqHeading3">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                            Does IKEA offer assembly services?
+                        </button>
+                    </h5>
+                </div>
+                <div id="faqCollapse3" class="collapse" aria-labelledby="faqHeading3" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Yes, IKEA offers assembly services for most of its products. You can choose this option during checkout, and a professional team will assemble your furniture for you.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="card">
+                <div class="card-header" id="faqHeading4">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                            What payment methods does IKEA accept?
+                        </button>
+                    </h5>
+                </div>
+                <div id="faqCollapse4" class="collapse" aria-labelledby="faqHeading4" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        IKEA accepts various payment methods including credit cards, debit cards, PayPal, and IKEA gift cards. Payment options may vary by region.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Company</h5>
+                    <ul>
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#abt">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#featured">Featured</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Customer Services</h5>
+                    <ul>
+                        <li><a href="abtUs.html #contact">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="orderTracking.html">Order Tracking</a></li>
+                        <li><a href="returns.html">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                    <a href="https://www.facebook.com/" class="social-icon"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.twitter.com/" class="social-icon"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.instagram.com/" class="social-icon"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.youtube.com/" class="social-icon"><i class='bx bxl-youtube'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="footer-text">© 2024 IKEA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+        <!-- Footer Ends -->
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    // JavaScript to add sticky class to the navbar
+    document.addEventListener('DOMContentLoaded', function() {
+        var navbar = document.querySelector('.navbar');
+        var sticky = navbar.offsetTop;
+
+        function stickyNavbar() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add('sticky');
+            } else {
+                navbar.classList.remove('sticky');
+            }
+        }
+
+        window.onscroll = function() {
+            stickyNavbar();
+        };
+    });
+</script>
+</body>
+</html>
